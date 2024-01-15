@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block s %}
+    <script>
+        window.onload = function() {
+            document.getElementsByName('role').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                var role = this.value;
+                
+                document.getElementById('student-form').style.display = (role === 'student') ? 'block' : 'none';
+                document.getElementById('teacher-form').style.display = (role === 'teacher') ? 'block' : 'none';
+            });
+            });
+        };
+    </script>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1 class="text-center mt-5">Welcome to Attendance50</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h3 class="mt-5">Register</h3>
+                <input type="radio" id="student" name="role" value="student">
+                <label for="student">Student</label>
+                <input type="radio" id="teacher" name="role" value="teacher">
+                <label for="teacher">Teacher</label>
+
+                <div id="student-form" style="display: none;">
+                    <form action="/register_student" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rollno">Roll Number</label>
+                            <input type="text" class="form-control" id="rollno" name="rollno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="verifyPassword">Verify Password</label>
+                            <input type="password" class="form-control" id="confirmation" name="confirmation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Upload Photo</label>
+                            <input type="file" class="form-control-file" id="photo" name="photo">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+
+                <div id="teacher-form" style="display: none;">
+                    <form action="/register_teacher" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="verifyPassword">Verify Password</label>
+                            <input type="password" class="form-control" id="confirmation" name="confirmation" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
