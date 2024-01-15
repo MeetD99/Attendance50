@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Student</title>
+</head>
+<body id="student">
+   <section id="stu-homee">
+    <nav id="navbar">
+        <div class="logo">
+            <p>Attendance50</p>
+        </div>
+
+        <ul>
+            <li class="options" id="my-gp"><a href="/student/mygroups">My Groups</a></li>
+            <li class="options" id="join-gp"><a href="/student/joingroup">Join Group</a></li>
+            <li class="options" id="sign-out"><a href="/logout">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <div id="stu-home">
+        {% for group in groups %}
+            <a class="sub-names" href="/student/show_attendance/{{ group }}"><div class="subjects"><span>{{ group }}</span></div></a>
+        {% endfor %}
+    </div>
+   </section>
+</body>
+</html>

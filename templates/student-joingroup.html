@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Student</title>
+</head>
+<body>
+   <section id="stu-homee">
+
+    <nav id="navbar">
+        <div class="logo">
+            <p>Attendance50</p>
+        </div>
+
+        <ul>
+            <li class="options" id="my-gp"><a href="/student/mygroups">My Groups</a></li>
+            <li class="options" id="sign-out"><a href="/logout">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <div id="teach-create">
+        <div class="teach-create-container">
+            <div class="th-cr-con-head">
+                <div id="th-cr-img"></div>
+            </div>
+            <div class="th-cr-con-body">
+                <form action="/student/joingroup" method="post" enctype="multipart/form-data" class="forms">
+                    <div class="form-group">
+                        <label for="gp-name">Group Name</label>
+                        <input name="group_name" id="gp-name" type="text" placeholder="Group Name" required class="form-cont">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input name="password" id="pass" type="password" placeholder="Password" required class="form-cont">
+                    </div>
+                    <div class="form-bottom">
+                        <button id="reg-button">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   </section>
+</body>
+</html>
