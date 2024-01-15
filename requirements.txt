@@ -1,3 +1,5 @@
+Gunicorn
+pytz
 cs50
 Flask
 Flask-Session
