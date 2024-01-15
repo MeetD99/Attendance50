@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Student Table</title>
+</head>
+
+<body id="table-body">
+
+    <nav id="navbar">
+        <div class="logo">
+            <p>Attendance50</p>
+        </div>
+
+        <ul>
+            <li class="options" id="my-gp"><a href="/student/mygroups">My Groups</a></li>
+            <li class="options" id="join-gp"><a href="/student/joingroup">Join Group</a></li>
+            <li class="options" id="sign-out"><a href="/logout">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <div id="table-container">
+        <div id="table-head">
+            <p>{{ subject }}</p>
+        </div>
+        <div id="table-content">
+            <table>
+                <thead>
+                    <tr>   <th>DATE</th> <th>TIME</th> <th>STATUS</th>   </tr>
+                </thead>
+
+                <tbody>
+                    {% for record in records %}
+                        <tr>   
+                            <td>{{ record[0] }}</td> 
+                            <td>{{ record[1] }}</td> 
+                            {% if record[2] == "Present" %}
+                                <td><span class="pr">Present</span></td> 
+                            {% else %}
+                                <td><span class="ab">Absent</span></td> 
+                            {% endif %}  
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

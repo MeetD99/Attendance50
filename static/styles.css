@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    line-height: 2;
+}
+
+/*-------------------Lgin Page design------------------------*/
+/*-------------------Lgin Page design------------------------*/
+
+#main{
+    display: flex;
+    height: 100vh;
+    background-color: #112241;
+}
+
+#main-co{
+    width: 60%;
+}
+
+#main-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #ffff;
+}
+
+#role-ch{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#role-ch1{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    padding: 5px;
+    width: 100%;
+    height: 20%;
+}
+
+#role-ch2{
+    width: 50%;
+    height: 80%;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#role-ch3{
+    width: 50%;
+    height: 80%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#teach-img{
+    height: 78%;
+    width: 70%;
+    background-image: url("images/teach-img.jpg");    
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+#teach-img:hover{
+    border: 3px solid black;
+    height: 74%;
+    width: 66%;
+}
+
+#stu-img{
+    height: 78%;
+    width: 70%;
+    background-image: url("images/stu-img.jpg");    
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+#stu-img:hover{
+    border: 3px solid black;
+    height: 74%;
+    width: 66%;
+}
+
+#form-co{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#form-detail{
+    margin-top: 40px;
+    width: 70%;
+    height: 60%;
+}
+
+#teach-log, #stu-reg, #teach-reg{
+    height: 100%;
+    width: 100%;
+    display:none;
+}
+
+#stu-log{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#form-detail input{
+    padding: 5px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    font-weight: bold;
+}
+
+.form-cont{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba(41, 40, 40, 0.5);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.form-bottom{
+    font-weight: 500;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.form-bottom a{
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.form-bottom a:hover{
+    color: rgba(0, 0, 0, 0.5)
+}
+
+#upload-photo{
+    width: 130px;
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #112241;
+    color:white;
+   
+} 
+
+#login-button, #reg-button{
+    padding: 5px;
+    width: 90px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #112241;
+    color: white;
+}
+
+#login-button:hover, #reg-button:hover{
+    background-color: white;
+    color: #112241;
+}
+
+.forms{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*-------------------Student Page design------------------------*/
+/*-------------------Student Page design------------------------*/
+
+#student{
+    background-color: rgb(206, 216, 211);
+}
+
+#navbar{
+    background-color: #112241;
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+}
+
+#navbar .logo{
+    float: left;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 10px 50px;
+}
+
+#navbar ul{
+    padding: 20px 10px;
+    float: right;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+}
+
+#navbar li{
+    margin-inline: 8px;
+    list-style: none;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    border-radius: 35px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#navbar li a{
+    font-size: 15px;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+#my-gp,#join-gp{
+    background-color: white;
+
+    a{
+        color: #112241;
+    }
+}
+
+.logo{
+    color: white;
+}
+
+
+
+#sign-out{
+    background-color: rgb(237, 57, 57);
+    
+}
+
+#sign-out a{
+    color: white;
+}
+
+#stu-home{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20%;
+    justify-items: start;
+    align-items: start;
+    gap: 0px;
+
+}
+
+.subjects{
+    height: 15rem;
+    width: 15rem;
+    margin-inline: 20px;
+    margin-top: 20px;
+    border-radius: 40px;
+    background-color: rgb(68, 68, 208);
+    
+}
+
+
+
+/* --------------------------------------- */
+
+
+#table-body{
+    background-color: white;
+}
+
+#table-head
+{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#table-content{
+    margin-top: 30px;
+}
+
+#table-container{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table{
+   
+    border-radius: 15px;
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+
+    th{
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    thead tr{
+        background-color: rgba(0, 0, 0, 0.35);
+        border-radius: 15px;
+    }
+
+    td{
+        padding: 1rem 2rem;
+    }
+
+    .ab{
+        border: 1px solid rgb(205, 53, 53);
+        border-radius: 12px;
+        padding: 0.7rem 1rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(192, 46, 46);
+        color: rgb(222, 139, 139);
+    }
+
+    .pr{
+        border: 1px solid green;
+        border-radius: 12px;
+        padding: 0.7rem 1rem;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(55, 96, 55);
+        color: rgb(123, 181, 123);
+    }
+
+    tbody tr:nth-child(even){
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+
+
+
+#date-pick{
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: medium;
+    padding: 5px;
+    width: 250px;
+    height: 50px;
+}
+
+.date-time-body{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-time-head{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold
+}
+
+.date-time-con{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#date-time-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+input[type="file"]{
+    display: none;
+}
+
+#upload-label{
+    margin-top: 50px;
+    width: 200px;
+    height: 45px;
+    padding: 5px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    color: #112241;
+    font-size: large;
+    font-weight: 700;
+    transition: all 0.3s;
+} 
+
+#upload-label:hover{
+    
+    background-color: #112241;
+    color: white;
+}
+
+#update, #summary{
+    margin-top: 30px;
+    width: 200px;
+    height: 45px;
+    padding: 5px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #112241;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+#update:hover, #summary:hover{
+    border: 2px solid black;
+    background-color: white;
+    color: #112241;
+}
+
+.material-symbols-outlined {
+    margin-right: 15px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+#teach-create{
+    width: 300px;
+    height: 300px;
+}
+
+#teach-create{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teach-create-container{
+    height: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#th-cr-img{
+    background-image: url(images/group.jpg);
+    background-size: cover;
+    border: 1.5px solid black;
+}
+
+.th-cr-con-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.th-cr-con-body{
+    height: 60%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#th-cr-img{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+#cr-gp{
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#up-button{
+    margin-top: 20px;
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #112241;
+    color: white;
+}
+
+#up-button:hover{
+    background-color: white;
+    color: #112241;
+}
